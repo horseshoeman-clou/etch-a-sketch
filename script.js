@@ -34,11 +34,6 @@ for(let col=0;col<input;col++){
 
     square.style.backgroundColor=`rgba(0,0,0, ${opacity})`;
 
-    /*const r=Math.floor(Math.random()*256);
-    const g=Math.floor(Math.random()*256);
-    const b=Math.floor(Math.random()*256);
-
-    square.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;*/
 }
 );
 
