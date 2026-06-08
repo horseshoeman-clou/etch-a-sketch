@@ -19,13 +19,26 @@ for(let col=0;col<input;col++){
     const square=document.createElement("div");
     square.style.width=(960/input)+"px";
     square.style.height=(960/input)+"px";
+    square.dataset.opacity=0;
     square.addEventListener("mouseover",()=>
 {
-    const r=Math.floor(Math.random()*256);
+    let opacity=Number(square.dataset.opacity);
+
+    opacity+=0.1;
+
+    if(opacity>1){
+        opacity=1;
+    }
+
+    square.dataset.opacity=opacity;
+
+    square.style.backgroundColor=`rgba(0,0,0, ${opacity})`;
+
+    /*const r=Math.floor(Math.random()*256);
     const g=Math.floor(Math.random()*256);
     const b=Math.floor(Math.random()*256);
 
-    square.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;
+    square.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;*/
 }
 );
 
